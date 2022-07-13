@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const _ = require('lodash');
 
-const uriAtlas = "mongodb+srv://admin:admin@cluster0.vbbdz.mongodb.net/testDB";
+const uriAtlas = "mongodb+srv://admin:admin@cluster0.vbbdz.mongodb.net/todolistDB";
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 mongoose.connect(uriAtlas, {
   useNewUrlParser: true,
-  dbName: "testDB"
+  dbName: "todolistDB"
 });
 
 const itemsSchema = {

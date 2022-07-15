@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const _ = require('lodash');
 
-const uriAtlas = "mongodb+srv://admin:admin@cluster0.vbbdz.mongodb.net/todolistDB";
+const uriAtlas = "mongodb+srv://"+process.env.DB_USER+":"+process.env.DB_PASSWORD+"@cluster0.vbbdz.mongodb.net/?retryWrites=true&w=majority";					
 
 const app = express();
 
